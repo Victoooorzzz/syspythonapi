@@ -5,7 +5,7 @@ from app.main import app
 
 client = TestClient(app)
 
-# Configuración: Borrar DBs antes de cada test para empezar limpio
+
 @pytest.fixture(autouse=True)
 def clean_db():
     if os.path.exists("servers_db.json"):
